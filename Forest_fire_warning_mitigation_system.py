@@ -43,7 +43,7 @@ try:
         time.sleep(1)
 
 except KeyboardInterrupt:
-    print("❌ Program terminated manually")
+    print("Program terminated manually")
 
 finally:
     GPIO.cleanup()
