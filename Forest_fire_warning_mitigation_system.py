@@ -27,7 +27,7 @@ try:
 
         for i, pin in enumerate(flame_sensor_pins):
             if GPIO.input(pin) == GPIO.HIGH:  # Flame detected (assuming active-high sensors)
-                print(f"🔥 Flame detected on sensor {i + 1}")
+                print(f"Flame detected on sensor {i + 1}")
                 flame_detected = True
             else:
                 print(f"No Flame detected on sensor {i + 1}")
@@ -35,10 +35,10 @@ try:
         # Activate or deactivate the relay
         if flame_detected:
             GPIO.output(relay_pin, GPIO.HIGH)
-            print("🚨 Relay activated: Pumping water!")
+            print("Relay activated: Pumping water!")
         else:
             GPIO.output(relay_pin, GPIO.LOW)
-            print("✅ Relay deactivated")
+            print("Relay deactivated")
 
         time.sleep(1)
 
